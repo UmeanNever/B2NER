@@ -1,5 +1,6 @@
 <p align="center">
  <br>
+ <img src="assets/logo_tax.png" style="height: 80px;">
  <h2 align="center">Beyond Boundaries: Learning a Universal Entity Taxonomy <br> across Datasets and Languages for Open Named Entity Recognition <br> (B<sup>2</sup>NER) </h2>
 </p>
 
