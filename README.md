@@ -27,7 +27,7 @@ We provide 3 versions of our dataset.
  - `B2NERD_all`: Contain ~1.4M samples from 54 datasets. The full-data version of our dataset suitable for in-domain supervised evaluation. It has standardized entity definitions but does not go through any data selection or pruning.  
  - `B2NERD_raw`: Raw collected datasets with raw entity labels. It goes through basic format preprocessing but without further standardization.
 
-You can download the data from [Google Drive](https://drive.google.com/file/d/11Wt4RU48i06OruRca2q_MsgpylzNDdjN/view?usp=drive_link).  
+You can download the data from [Here](https://drive.google.com/file/d/11Wt4RU48i06OruRca2q_MsgpylzNDdjN/view?usp=drive_link).  
 Please also make sure you have got proper license to access the raw datasets in our collection.
 
 # Model & Code Usage 
