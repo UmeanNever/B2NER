@@ -6,14 +6,14 @@
 
 <p align="center">
  <a href="https://github.com/UmeanNever/B2NER/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/UmeanNever/B2NER"></a>
- <a href=""><img alt="Paper" src="https://img.shields.io/badge/📖-Paper-orange"></a>
+ <a href="http://arxiv.org/abs/2406.11192"><img alt="Paper" src="https://img.shields.io/badge/📖-Paper-orange"></a>
  <a href="https://drive.google.com/file/d/11Wt4RU48i06OruRca2q_MsgpylzNDdjN/view"><img alt="Blog" src="https://img.shields.io/badge/📀-Data-blue"></a>
 </p>
 
 We present B2NERD, a cohesive and efficient dataset that can improve LLMs' generalization on the challenging Open NER task, refined from 54 existing English or Chinese datasets. 
 Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and surpass previous methods in 3 out-of-domain benchmarks across 15 datasets and 6 languages.
 
- - 📖 Paper: 
+ - 📖 Paper: [Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition](http://arxiv.org/abs/2406.11192)
  - 📀 Data: See below data section.
 
 # Release
