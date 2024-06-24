@@ -17,7 +17,7 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
  - 📀 Data: See below data section.
 
 # Release
- - **[ETA: June 30]** We plan to release our codes and models supporting the training and inference of our B2NER models.
+ - **[ETA: July 2]** We plan to release our codes and models supporting the training and inference of our B2NER models.
  - **[June 18]** We release our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
 # Data
@@ -31,6 +31,14 @@ You can download the data from [Here](https://drive.google.com/file/d/11Wt4RU48i
 Please also make sure you have got proper license to access the raw datasets in our collection.
 
 # Model & Code Usage 
-On the way. ETA June 30th
+On the way. ETA July 2nd
 
 # Cite
+```
+@article{yang2024beyond,
+  title={Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition},
+  author={Yang, Yuming and Zhao, Wantong and Huang, Caishuang and Ye, Junjie and Wang, Xiao and Zheng, Huiyuan and Nan, Yang and Wang, Yuran and Xu, Xueying and Huang, Kaixin and others},
+  journal={arXiv preprint arXiv:2406.11192},
+  year={2024}
+}
+```
