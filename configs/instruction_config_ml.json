@@ -1,0 +1,69 @@
+{
+  "zh": {
+    "RE": [
+      {"instruction_type": "zero-shot", "instruction": "给定关系的标签范围，请提取文本中存在关系的两个实体以及关系的标签。答案格式为 \"关系标签: 实体, 实体; 关系标签: 实体, 实体\"。 \n标签范围: {labels_str} \n\n文本: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "给定关系的标签范围，请提取文本中存在关系的两个实体以及关系的标签。答案格式为 \"关系标签: 实体, 实体; 关系标签: 实体, 实体\"。下面有一些例子。 \n标签范围: {labels_str} \n\n@@examples@@文本: {text} \n"}
+    ],
+    "NER": [
+      {"instruction_type": "zero-shot", "instruction": "给定实体的标签范围，请识别文本中属于这些标签的所有实体。答案格式为 \"实体标签: 实体; 实体标签: 实体\"。\n标签范围: {labels_str}\n\n文本: {text} \n"},
+      {"instruction_type": "zero-shot-with-description", "instruction": "给定实体的标签范围以及对每个标签的描述，请识别文本中属于这些标签的所有实体。答案格式为 \"实体标签: 实体; 实体标签: 实体\"。\n标签范围: {labels_str}\n标签描述: {label_descriptions_str}\n\n文本: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "给定实体的标签范围，请识别文本中属于这些标签的所有实体。答案格式为 \"实体标签: 实体; 实体标签: 实体\"。下面有一些例子。 \n标签范围: {labels_str} \n\n@@examples@@文本: {text} \n"}
+    ],
+    "EEA": [
+      {"instruction_type": "zero-shot", "instruction": "给定事件类型、触发词和事件参数的标签范围，请提取文本中所有对应事件的事件参数。答案格式为 \"参数标签: 实体; 参数标签: 实体\"。\n事件类型: {event_type}, 触发词: {event_trigger}\n标签范围: {labels_str}\n\n文本: {text} \n"}
+    ],
+    "newEEA": [
+      {"instruction_type": "zero-shot", "instruction": "给定事件类型和事件参数的标签范围，请提取文本中所有对应事件的事件参数。答案格式为 \"参数标签: 实体; 参数标签: 实体\"。\n事件类型: {event_type}\n标签范围: {labels_str}\n\n文本: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "给定事件类型和事件参数的标签范围，请提取文本中所有对应事件的事件参数。答案格式为 \"参数标签: 实体; 参数标签: 实体\"。下面有一些例子。 \n事件类型: {event_type}\n标签范围: {labels_str}\n\n@@examples@@文本: {text} \n"}
+    ],
+    "EET": [
+      {"instruction_type": "zero-shot", "instruction": "给定事件的标签范围，请识别文本中属于这些标签的所有事件。答案格式为 \"事件标签: 触发词; 事件标签: 触发词\"。\n标签范围: {labels_str}\n\n文本: {text} \n"}
+    ],
+    "newEET": [
+      {"instruction_type": "zero-shot", "instruction": "给定事件的标签范围，请识别文本中属于这些标签的所有事件。答案格式为 \"事件标签; 事件标签\"。\n标签范围: {labels_str}\n\n文本: {text} \n"}
+    ],
+    "Sentiment": [
+      {"instruction_type": "zero-shot", "instruction": "给定情感的类别范围，请判断文本中的情感倾向。输出格式为 \"情感类别\"。 \n类别范围: {labels_str} \n\n文本: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "给定情感的类别范围，请判断文本中的情感倾向。输出格式为 \"情感类别\"。下面有一些例子。 \n类别范围: {labels_str} \n\n@@examples@@文本: {text} \n"}
+    ]
+  },
+  "en": {
+    "RE": [
+      {"instruction_type": "zero-shot", "instruction": "Given the label set of relations, please extract the two entities and relation label from the text. The answer format should be \"relation label: entity, entity; relation label: entity, entity\". \nLabel Set: {labels_str} \n\nText: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "Given the label set of relations, please extract the two entities and relation label from the text. The answer format should be \"relation label: entity, entity; relation label: entity, entity\". Below are some examples. \nLabel Set: {labels_str} \n\n@@examples@@Text: {text} \n"}
+    ],
+    "NER": [
+      {"instruction_type": "zero-shot", "instruction": "Given the label set of entities, please recognize all the entities in the text. The answer format should be \"entity label: entity; entity label: entity\". \nLabel Set: {labels_str} \n\nText: {text} \n"},
+      {"instruction_type": "zero-shot-with-description", "instruction": "Given the label set of entities and their descriptions, please recognize all the entities in the text. The answer format should be \"entity label: entity; entity label: entity\". \nLabel Set: {labels_str} \nLabel Description: {label_descriptions_str} \n\nText: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "Given the label set of entities, please recognize all the entities in the text. The answer format should be \"entity label: entity; entity label: entity\". Below are some examples. \nLabel Set: {labels_str} \n\n@@examples@@Text: {text} \n"}
+    ],
+    "EEA": [
+      {"instruction_type": "zero-shot", "instruction": "Given event type, trigger word and the label set of event arguments, please extract all event arguments of corresponding events from the text. The answer format should be \"argument label: entity; argument label: entity\". \nEvent type: {event_type}, Trigger word: {event_trigger}\nLabel Set: {labels_str} \n\nText: {text} \n"}
+    ],
+    "newEEA": [
+      {"instruction_type": "zero-shot", "instruction": "Given event type and the label set of event arguments, please extract all event arguments of corresponding events from the text. The answer format should be \"argument label: entity; argument label: entity\". \nEvent type: {event_type}\nLabel Set: {labels_str} \n\nText: {text} \n"},
+      {"instruction_type": "few-shot", "instruction": "Given event type and the label set of event arguments, please extract all event arguments of corresponding events from the text. The answer format should be \"argument label: entity; argument label: entity\". Below are some examples. \nEvent type: {event_type} \nLabel Set: {labels_str} \n\n@@examples@@Text: {text} \n"}
+    ],
+    "EET": [
+      {"instruction_type": "zero-shot", "instruction": "Given the label set of events, please recognize all the events that belong to these labels in the text. The answer format should be \"event label: trigger word; event label: trigger word\". \nLabel Set: {labels_str} \n\nText: {text} \n"}
+    ]
+  },
+  "de": {
+    "NER": [
+      {"instruction_type": "zero-shot", "instruction": "Gegeben die Menge der Entitäten, erkenne alle Entitäten im Text. Das Antwortformat sollte sein \"Entität Label: Entität; Entität Label: Entität\". \nLabel Set: {labels_str} \n\nText: {text} \n"}
+    ]
+  },
+  "nl": {
+    "NER": [
+      {"instruction_type": "zero-shot", "instruction": "Gegeven de set van entiteiten, herken al de entiteiten in de tekst. Het antwoordformaat moet zijn \"entiteit label: entiteit; entiteit label: entiteit\". \nLabel Set: {labels_str} \n\nTekst: {text} \n"}
+    ]
+  },
+  "es": {
+    "NER": [
+      {"instruction_type": "zero-shot", "instruction": "Dada la lista de entidades, reconoce todas las entidades en el texto. El formato de la respuesta debe ser \"etiqueta de entidad: entidad; etiqueta de entidad: entidad\". \nConjunto de Etiquetas: {labels_str} \n\nTexto: {text} \n"}
+    ]
+  }
+}
+
+
+

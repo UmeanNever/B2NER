@@ -1,0 +1,28 @@
+{
+    "NER_en_other": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22_de_sample_5000"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22_es_sample_5000"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22_nl_sample_5000"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22_ru_sample_5000"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22_en_sample_5000"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22_zh_sample_5000"
+        }
+    ]
+}

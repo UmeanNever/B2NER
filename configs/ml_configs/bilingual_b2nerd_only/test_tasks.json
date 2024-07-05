@@ -1,0 +1,62 @@
+{
+    "NER_en": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "CrossNER_AI"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CrossNER_literature"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CrossNER_music"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CrossNER_politics"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CrossNER_science"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "mit-movie"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "mit-restaurant"
+        }
+    ],
+    "NER_zh": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "CAIL2021"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CCKS2021address"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CLUENER"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CBLUE"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "math-high"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "weibo"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "zh-ontonotes"
+        }
+    ]
+}
