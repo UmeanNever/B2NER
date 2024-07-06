@@ -71,7 +71,7 @@ On the way. ETA 07/10.
 <!--We have observed that the official weights and model file of InternLM2 were recently updated. Our LoRA adapters, however, were trained using the initial release of InternLM2 from January 2024. To ensure compatibility and ease of use, we will provide retrained LoRA adapters based on the current version of InternLM2 (as of July 2024). Please remember to check the version of your InternLM2 weights before applying the adapters. -->
 
 ## Requirements
-Our main experiments are conducted on Nvdia A100 40G and H20 nodes under
+Our main experiments are conducted on a single NVIDIA A100 40G eight-card node. We also use a single H20 eight-card node for some supplementary experiments. The environments are built with the following configurations:
 - python==3.11
 - CUDA==12.4 (H20) or 11.8 (A100)
 - torch==2.3.1
