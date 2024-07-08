@@ -44,9 +44,9 @@ Seeds=(23 32 34 42)
 
 for SEED in "${Seeds[@]}"; do
 
-   RUN_NAME="20B+b2ner+bs256+${SEED}"
+   RUN_NAME="20B+b2ner+bs128+${SEED}"
    # larger GRAD_ACC for larger data
-   GRAD_ACC=32
+   GRAD_ACC=16
    OUTPUT_DIR="output/MLV2-InternLM2-0s/${RUN_NAME}"
    MODEL_NAME_OR_PATH="/mnt/data/user/yang_yuming/data/Models/internlm2-20b"
    TASK_CONFIG_DIR="configs/ml_configs/bilingual_full"

@@ -4,6 +4,7 @@
 *.tsv
 temp_*.py
 temp_*.sh
+report/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

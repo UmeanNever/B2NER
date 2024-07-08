@@ -6,8 +6,9 @@
 
 <p align="center">
  <a href="https://github.com/UmeanNever/B2NER/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/UmeanNever/B2NER"></a>
- <a href="http://arxiv.org/abs/2406.11192"><img alt="Paper" src="https://img.shields.io/badge/📖-Paper-orange"></a>
- <a href="https://huggingface.co/datasets/Umean/B2NERD"><img alt="Blog" src="https://img.shields.io/badge/📀-Data-blue"></a>
+ <a href="http://arxiv.org/abs/2406.11192"><img alt="Paper" src="https://img.shields.io/badge/📖-Paper-red"></a>
+ <a href="https://huggingface.co/datasets/Umean/B2NERD"><img alt="Data" src="https://img.shields.io/badge/📀-Data-blue"></a>
+<a href="https://huggingface.co/Umean/B2NER-Internlm2-20B-LoRA"><img alt="Data" src="https://img.shields.io/badge/💾-Model-yellow"></a>
 </p>
 
 We present B2NERD, a cohesive and efficient dataset that can improve LLMs' generalization on the challenging Open NER task, refined from 54 existing English or Chinese datasets. 
@@ -16,11 +17,11 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
  - 📖 Paper: [Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition](http://arxiv.org/abs/2406.11192)
  - 🎮 Code Repo: https://github.com/UmeanNever/B2NER
  - 📀 Data: See below data section. You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD) or [Google Drive](https://drive.google.com/file/d/11Wt4RU48i06OruRca2q_MsgpylzNDdjN/view?usp=drive_link).
- - 💾 Model (LoRA Adapters): On the way
+ - 💾 Model (LoRA Adapters): See below model & code usage section. We provide light-weight trained LoRA adapters for direct usage.
 
 Feature Highlights:
  - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date.
- - Achieves SoTA OOD NER performance across multiple benchmarks.
+ - Achieves SoTA OOD NER performance across multiple benchmarks with light-weight LoRA adapters (<=50MB).
  - Uses simple natural language format prompt, achieving 4X faster inference speed than previous SoTA with complex prompts.
  - Easy integration with other IE tasks by adopting UIE-style instructions. 
  - Provides a universal entity taxonomy that guides the definition and label naming of new entities.
@@ -33,9 +34,9 @@ Feature Highlights:
 
 
 # Release 📆
- - **[ETA: July 10]** We plan to release models supporting direct usage of our B2NER models.
- - **[July 5]** We release our codes supporting the training and inference of our B2NER models.
- - **[June 18]** We release our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
+ - **[July 8]** We released our models supporting direct usage of our B2NER models. We also provide sample model predictions from our models.
+ - **[July 5]** We released our codes supporting the training and inference of our B2NER models.
+ - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
 # Data
 One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training.  
@@ -67,8 +68,12 @@ More dataset information can be found in the Appendix of paper.
 We generally follow and update [InstructUIE](https://github.com/BeyonderXX/InstructUIE)'s repo to build our codes. 
 
 ## Model Checkpoints (LoRA Adapters)
-On the way. ETA 07/10.  
-<!--We have observed that the official weights and model file of InternLM2 were recently updated. Our LoRA adapters, however, were trained using the initial release of InternLM2 from January 2024. To ensure compatibility and ease of use, we will provide retrained LoRA adapters based on the current version of InternLM2 (as of July 2024). Please remember to check the version of your InternLM2 weights before applying the adapters. -->
+
+Here we provide trained LoRA adapters that can be applied to InternLM2-20B and InternLM2.5-7B, respectively. You can directly download them (less than 50MB) and use them to do inference following instructions in below Sample Usage - Inference subsection.
+- B2NER-InternLM2-20B: [Huggingface](https://huggingface.co/Umean/B2NER-Internlm2-20B-LoRA)
+- B2NER-InternLM2.5-7B: [Huggingface](https://huggingface.co/Umean/B2NER-Internlm2.5-7B-LoRA)
+
+*We have observed that the official weights and model file of InternLM2 were recently updated. Our LoRA adapters, however, were trained using the initial release of InternLM2 from January 2024. To ensure future compatibility and ease of use, we provide retrained LoRA adapters based on the current version of InternLM2/2.5 (as of July 2024). Please remember to check the version of your backbone model's weights before applying the adapters.*
 
 ## Requirements
 Our main experiments are conducted on a single NVIDIA A100 40G eight-card node. We also use a single H20 eight-card node for some supplementary experiments. The environments are built with the following configurations:
@@ -92,9 +97,10 @@ Our environment should be compatible with current latest backbone LLMs like LLam
 ## Sample Usage - Inference
 Here's an example of using provided lora adapter to infer on the test datasets of B2NERD:  
  - Download the B2NERD data, backbone model, and our LoRA checkpoint. Ensure that you have the correct pair of backbone model and LoRA checkpoints.
+ - Check the `adapter_config.json` in downloaded LoRA adapters. Rewrite `base_model_name_or_path` with correct backbone model name/path in your environment.
  - Revise the paths of `DATA_DIR`, `MODEL_NAME_OR_PATH` and `LORA_WEIGHT_PATH` in the script `/scripts/eval_lora_internlm2.sh`.
    - Point `DATA_DIR` to the downloaded `B2NERD` directory. 
-   - Point `MODEL_NAME_OR_PATH` to local/online backbone model dir.
+   - Point `MODEL_NAME_OR_PATH` to your local/online backbone model name/path.
    - Point `LORA_WEIGHT_PATH` to the downloaded lora checkpoint directory where an `adapter_config` is located. 
    - You can also customize the `OUTPUT_DIR` to specify where all results will be saved.
  - Start inference via following command
@@ -102,14 +108,18 @@ Here's an example of using provided lora adapter to infer on the test datasets o
 cd B2NER
 bash ./scripts/eval_lora_internlm2.sh
 ```
-The decoded results would save to `predict_eval_predictions.jsonl` in your output dir.  
-Results/metrics can be find in the `report` folder inside output dir.   
+The decoded results from inference would save to `predict_eval_predictions.jsonl` in your output dir.  
+
+## Evaluation & Sample Predictions
+Results/metrics should be automatically computed by our script and can be find in the `report` folder inside output dir.   
 
 You can also manually calculate the metrics for arbitary predictions using 
 ```
 cd src/
 python calculate_f1.py --root /path/to/predict_eval_predictions.jsonl
 ```
+
+We provide sample predictions results for our 7B and 20B models in `/sample_predictions`.
 
 ## Sample Usage - Training
 Similar to the inference steps. 
@@ -135,7 +145,7 @@ Final average results can be computed by averaging the metrics at certain epoch 
 
 Customized training could be done by changing the `TASK_CONFIG_DIR` in the training script which specifies the train/test datasets. For instance, you can train a different model for cross-lingual experiments on Multiconer22 dataset by this script `/scripts/train_lora_internlm2_crosslingual.sh`.
 
-Note that our experiments use the internlm2 weights initially released on January 2024. We found that the official weights of internlm2 have been updated recently which are not fully experimented by us. You may need to adjust some default hyperparameters to achieve best performance.
+*Note that our experiments use the internlm2 weights initially released on January 2024. We found that the official weights of internlm2 have been updated recently which are not fully experimented by us. You may need to adjust some default hyperparameters to achieve best performance.*
 
 ## Extension to Other IE Tasks
 Since we follow the instruction and datset format of [InstructUIE](https://github.com/BeyonderXX/InstructUIE), the RE and EE datasets can also be combined with B2NERD to train a unified model. Although this is not the primary focus of our work, our code supports such UIE model training. 

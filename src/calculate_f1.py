@@ -14,7 +14,7 @@ def main():
     os.environ['EXPORT_IMG'] = '0'      # 是否导出混淆矩阵图片
     parser = argparse.ArgumentParser(description='Calculate F1 scores.')
     parser.add_argument('--root', type=str, 
-                        default='/mnt/data/user/yang_yuming/proj2023/UOpenFS/B2NER/output/MLV2-InternLM2-0s/20B+b2ner+bs256+23',
+                        default='/mnt/data/user/yang_yuming/proj2023/UOpenFS/B2NER/sample_predictions/B2NER-7B',
                         help='Root directory to calculate F1 scores for.')
     args = parser.parse_args()
     root = args.root
