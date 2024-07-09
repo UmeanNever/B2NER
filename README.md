@@ -22,7 +22,7 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 Feature Highlights:
  - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date.
  - Achieves SoTA OOD NER performance across multiple benchmarks with light-weight LoRA adapters (<=50MB).
- - Uses simple natural language format prompt, achieving 4X faster inference speed than previous SoTA with complex prompts.
+ - Uses simple natural language format prompt, achieving 4X faster inference speed than previous SoTA which use complex prompts.
  - Easy integration with other IE tasks by adopting UIE-style instructions. 
  - Provides a universal entity taxonomy that guides the definition and label naming of new entities.
 
