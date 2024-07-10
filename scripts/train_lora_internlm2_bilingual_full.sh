@@ -40,7 +40,7 @@ export TRANSFORMERS_CACHE=/root/.cache/huggingface
 
 port=$(shuf -i25000-30000 -n1)
 
-Seeds=(23 32 34 42)
+Seeds=(23 33 34 42)
 
 for SEED in "${Seeds[@]}"; do
 
@@ -62,7 +62,7 @@ for SEED in "${Seeds[@]}"; do
    # 注意 bs_per_gpu * num_gpu * gradient_accumulation_steps
    # 注意修改 model_name_or_path，output_dir, run_name, data_dir, task_config_dir, instruction_file
 
-   # A800 * 8
+   # A100 * 8
    if [ ! -f "$OUTPUT_DIR/train_results.json" ]; then
       echo "Running training on $OUTPUT_DIR"
       deepspeed --include localhost:0,1,2,3,4,5,6,7 --master_port $port src/run.py \
