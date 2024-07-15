@@ -16,8 +16,8 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 
  - 📖 Paper: [Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition](http://arxiv.org/abs/2406.11192)
  - 🎮 Code Repo: We provide codes for both training and inference at https://github.com/UmeanNever/B2NER
- - 📀 Data: See below [data](#data-b2nerd) section. You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD).
- - 💾 Model (LoRA Adapters): See below [model usage](#quick-demo-with-b2ner-models) section. We provide light-weight trained LoRA adapters for direct demo usage.
+ - 📀 Data: You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD). See below data section for details.  
+ - 💾 Model (LoRA Adapters): We provide light-weight trained LoRA adapters for direct demo usage. See below [model usage](#quick-demo-with-b2ner-models) section.  
 
 Feature Highlights:
  - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date for training Open NER models.  
