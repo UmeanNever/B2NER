@@ -16,11 +16,11 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 
  - 📖 Paper: [Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition](http://arxiv.org/abs/2406.11192)
  - 🎮 Code Repo: We provide codes for both training and inference at https://github.com/UmeanNever/B2NER
- - 📀 Data: See below data section. You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD).
- - 💾 Model (LoRA Adapters): See below model & code usage section. We provide light-weight trained LoRA adapters for [direct usage](#quick-demo-with-b2ner-models).
+ - 📀 Data: See below [data](#data-b2nerd) section. You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD).
+ - 💾 Model (LoRA Adapters): See below [model usage](#quick-demo-with-b2ner-models) section. We provide light-weight trained LoRA adapters for direct demo usage.
 
 Feature Highlights:
- - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date.  
+ - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date for training Open NER models.  
  - Achieves SoTA OOD NER performance across multiple benchmarks with light-weight LoRA adapters (<=50MB). 
  - Uses simple natural language format prompt, achieving 4X faster inference speed than previous SoTA which use complex prompts. 
  - Easy integration with other IE tasks by adopting UIE-style instructions. 
@@ -34,12 +34,12 @@ Feature Highlights:
 | B2NER | **72.1**    |  **61.3**     | **43.3**
 
 
-# Release 📆
+## Release 📆
  - **[July 15]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
  - **[July 5]** We released our codes supporting the training and inference of our B2NER models.
  - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
-# Data (B2NERD)
+## Data (B2NERD)
 One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training.  
 We provide 3 versions of our dataset.  
  - `B2NERD` (Recommended): Contain ~52k samples from 54 Chinese or English datasets. This is the final version of our dataset suitable for out-of-domain / zero-shot NER model training. It features standardized entity definitions and pruned, diverse data.  
@@ -64,11 +64,11 @@ Below are the datasets statistics and source datasets for `B2NERD` dataset.
 
 More dataset information can be found in the Appendix of paper.
 
-# Quick Demo With B2NER Models
+## Quick Demo With B2NER Models
 
 You can directly download our trained LoRA adapters (less than 50MB) and use them to do demo following instructions in below Sample Usage - Quick Demo subsection.
 
-## Model Checkpoints (LoRA Adapters)
+### Model Checkpoints (LoRA Adapters)
 
 Here we provide trained LoRA adapters that can be applied to InternLM2-20B and InternLM2.5-7B, respectively. 
 - B2NER-InternLM2-20B: [Huggingface](https://huggingface.co/Umean/B2NER-Internlm2-20B-LoRA)
@@ -76,7 +76,7 @@ Here we provide trained LoRA adapters that can be applied to InternLM2-20B and I
 
 *We have observed that the official weights and model file of InternLM2 were recently updated. Our LoRA adapters, however, were trained using the initial release of InternLM2 from January 2024. To ensure future compatibility and ease of use, we provide retrained LoRA adapters based on the current version of InternLM2/2.5 (as of July 2024). Please remember to check the version of your backbone model's weights before applying the adapters.*
 
-## Sample Usage - Quick Demo
+### Sample Usage - Quick Demo
 Here we show how to use our provided lora adapter to do quick demo with customized input. You can also refer to `src/demo.ipynb` to see our examples and reuse for your own demo.
  - Prepare/download our LoRA checkpoint and corresponding backbone model.
  - Load the model & tokenizer.
@@ -130,10 +130,10 @@ print(generated_text.split("答案:")[-1])
 # 组织机构名->公司: 暴雪中国; 人名: Moon; 作品名->游戏作品: 星际争霸2; 人名: Infi
 ```
 
-# Code Usage for Training and Inference
+## Code Usage for Training and Inference
 We generally follow and update [InstructUIE](https://github.com/BeyonderXX/InstructUIE)'s repo to build our codes. 
 
-## Requirements
+### Requirements
 Our main experiments are conducted on a single NVIDIA A100 40G eight-card node. We also use a single H20 eight-card node for some supplementary experiments. The environments are built with the following configurations:
 - python==3.11
 - CUDA==12.4 (H20) or 11.8 (A100)
@@ -152,7 +152,7 @@ pip3 install --pre torch==2.4.0dev20240610 torchvision torchaudio --index-url ht
 
 Our environment should be compatible with current latest backbone LLMs like LLama2, InternLM2/2.5 or Qwen2 under our simple testing.
 
-## Sample Usage - Batch Inference
+### Sample Usage - Batch Inference
 Here's an example of using provided lora adapter to infer on the test datasets of B2NERD:  
  - Download the B2NERD data, backbone model, and our LoRA checkpoint. Ensure that you have the correct pair of backbone model and LoRA checkpoints.
  - Check the `adapter_config.json` in downloaded LoRA adapters. Rewrite `base_model_name_or_path` with correct backbone model name/path in your environment.
@@ -168,7 +168,7 @@ bash ./scripts/eval_lora_internlm2.sh
 ```
 The decoded results from inference would save to `predict_eval_predictions.jsonl` in your output dir.  
 
-## Evaluation & Sample Predictions
+### Evaluation & Sample Predictions
 Results/metrics should be automatically computed by our script and can be find in the `report` folder inside output dir.   
 
 You can also manually calculate the metrics for arbitary predictions using 
@@ -179,7 +179,7 @@ python calculate_f1.py --root /path/to/predict_eval_predictions.jsonl
 
 We provide sample predictions results for our 7B and 20B models in `/sample_predictions`.
 
-## Sample Usage - Training
+### Sample Usage - Training
 Similar to the inference steps. 
  - Download the B2NERD data, backbone model, and our LoRA checkpoint. Ensure that you have the correct pair of backbone model and LoRA checkpoints.
  - Revise the paths of `DATA_DIR` and `MODEL_NAME_OR_PATH` in the training script in `/scripts/` like `/scripts/train_lora_internlm2_bilingual_full.sh`.
@@ -210,7 +210,7 @@ Since we follow the instruction and datset format of [InstructUIE](https://githu
 
 To do this, simply replace `TASK_CONFIG_DIR` with a new task config that includes RE and EE tasks and prepare the IE datasets in the required format (i.e., reuse IE_Instructions from InstructUIE). You may refer to the preprocessing codes for RE and EE in `b2ner_dataset.py` This way, you can leverage the benefits of our B2NERD data in an LLM for IE tasks.
 
-# Cite
+## Cite
 ```
 @article{yang2024beyond,
   title={Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition},
