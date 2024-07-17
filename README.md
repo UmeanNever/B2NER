@@ -97,7 +97,7 @@ config = PeftConfig.from_pretrained(lora_weight_path)
 model = PeftModel.from_pretrained(base_model, lora_weight_path, torch_dtype=torch.bfloat16)
 ```
 
- - Set `text` and `labels` for your NER demo. Prepare instructions and generate the answer. Below are an English example and a Chinese example based on our B2NER-InternLM2.5-7B.
+ - Set `text` and `labels` for your NER demo. Prepare instructions and generate the answer. Below are an English example and a Chinese example based on our B2NER-InternLM2.5-7B (Both examples are out-of-domain data).
 
 ```python
 ## English Example ##
@@ -115,8 +115,8 @@ print(generated_text.split("Answer:")[-1])
 # year or time period: 1990 s; movie genre: romance; movie actor: kelsy grammer
 
 
-## Chinese Example ##
-# Input your own text and target entity labels. The model will extract entities inside provided label set from text.
+## 中文例子 ##
+# 输入您自己的文本和目标实体类别标签。模型将从文本中提取出在提供的标签集内的实体。
 text = "暴雪中国时隔多年之后再次举办了官方比赛，而Moon在星际争霸2中发挥不是很理想，对此Infi感觉Moon是哪里出了问题呢？"
 labels = ["人名", "作品名->文字作品", "作品名->游戏作品", "作品名->影像作品", "组织机构名->政府机构", "组织机构名->公司", "组织机构名->其它", "地名"]
 
