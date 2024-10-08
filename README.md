@@ -52,7 +52,7 @@ Please ensure that you have the proper licenses to access the raw datasets in ou
 
 Below are the datasets statistics and source datasets for `B2NERD` dataset.
 
-| Split | Lang. | Datasets | Types | Num | Raw Num |
+| Split | Lang. | Datasets | Types | Selected Num. in B2NERD | Raw Num. in B2NERD_all |
 |-------|-------|----------|-------|-----|---------|
 | Train | En    | 19       | 119   | 25,403 | 838,648 |
 |       | Zh    | 21       | 222   | 26,504 | 580,513 |
