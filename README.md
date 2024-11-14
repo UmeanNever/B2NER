@@ -40,9 +40,10 @@ Feature Highlights:
  - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
 ## Data (B2NERD)
-One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training.  
+One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training. **The preprocessed test datasets (7 for Chinese NER and 7 for English NER) used for Open NER OOD evaluation in our paper are also included in the released dataset** to facilitate convenient evaluation for future research.  
+
 We provide 3 versions of our dataset.  
- - `B2NERD` (Recommended): Contain ~52k samples from 54 Chinese or English datasets. This is the final version of our dataset suitable for out-of-domain / zero-shot NER model training. It features standardized entity definitions and pruned, diverse data.  
+ - `B2NERD` (**Recommended**): Contain ~52k samples from 54 Chinese or English datasets. This is the final version of our dataset suitable for out-of-domain / zero-shot NER model training. It features standardized entity definitions and pruned, diverse data.  
  - `B2NERD_all`: Contain ~1.4M samples from 54 datasets. The full-data version of our dataset suitable for in-domain supervised evaluation. It has standardized entity definitions but does not undergo any data selection or pruning.  
  - `B2NERD_raw`: The raw collected datasets with raw entity labels. It goes through basic format preprocessing but without further standardization.
 
@@ -51,7 +52,7 @@ Please ensure that you have the proper licenses to access the raw datasets in ou
 
 Below are the datasets statistics and source datasets for `B2NERD` dataset.
 
-| Split | Lang. | Datasets | Types | Num | Raw Num |
+| Split | Lang. | Datasets | Types | Selected Num. in B2NERD | Raw Num. in B2NERD_all |
 |-------|-------|----------|-------|-----|---------|
 | Train | En    | 19       | 119   | 25,403 | 838,648 |
 |       | Zh    | 21       | 222   | 26,504 | 580,513 |
@@ -97,7 +98,7 @@ config = PeftConfig.from_pretrained(lora_weight_path)
 model = PeftModel.from_pretrained(base_model, lora_weight_path, torch_dtype=torch.bfloat16)
 ```
 
- - Set `text` and `labels` for your NER demo. Prepare instructions and generate the answer. Below are an English example and a Chinese example based on our B2NER-InternLM2.5-7B.
+ - Set `text` and `labels` for your NER demo. Prepare instructions and generate the answer. Below are an English example and a Chinese example based on our B2NER-InternLM2.5-7B (Both examples are out-of-domain data).
 
 ```python
 ## English Example ##
@@ -115,8 +116,8 @@ print(generated_text.split("Answer:")[-1])
 # year or time period: 1990 s; movie genre: romance; movie actor: kelsy grammer
 
 
-## Chinese Example ##
-# Input your own text and target entity labels. The model will extract entities inside provided label set from text.
+## 中文例子 ##
+# 输入您自己的文本和目标实体类别标签。模型将从文本中提取出在提供的标签集内的实体。
 text = "暴雪中国时隔多年之后再次举办了官方比赛，而Moon在星际争霸2中发挥不是很理想，对此Infi感觉Moon是哪里出了问题呢？"
 labels = ["人名", "作品名->文字作品", "作品名->游戏作品", "作品名->影像作品", "组织机构名->政府机构", "组织机构名->公司", "组织机构名->其它", "地名"]
 
