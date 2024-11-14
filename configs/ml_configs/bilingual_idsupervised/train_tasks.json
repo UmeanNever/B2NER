@@ -50,6 +50,14 @@
         },
         {
             "sampling strategy": "random",
+            "dataset name": "mit-movie"
+        },
+        {
+            "sampling strategy": "random",
+            "dataset name": "mit-restaurant"
+        },
+        {
+            "sampling strategy": "random",
             "dataset name": "MultiNERD"
         },
         {
@@ -75,6 +83,10 @@
         {
             "sampling strategy": "random",
             "dataset name": "WikiNeural"
+        },
+        {
+            "sampling strategy": "random_50000",
+            "dataset name": "PileNER"
         }
     ],
     "NER_zh": [

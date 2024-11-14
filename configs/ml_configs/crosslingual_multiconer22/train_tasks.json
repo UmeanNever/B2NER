@@ -41,7 +41,7 @@
             "dataset name": "FindVehicle"
         },
         {
-            "sampling strategy": "full",
+            "sampling strategy": "random",
             "dataset name": "GENIA_NER"
         },
         {

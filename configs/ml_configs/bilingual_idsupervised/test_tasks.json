@@ -1,0 +1,110 @@
+{
+    "NER_en": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "ACE 2005"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "AnatEM"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "bc2gm"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "bc4chemd"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "bc5cdr"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "Broad Tweet Corpus"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CoNLL 2003"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "FabNER"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "FindVehicle"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "GENIA_NER"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "HarveyNER"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "mit-movie"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "mit-restaurant"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "MultiNERD"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "ncbi"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "Ontonotes"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "PolyglotNER"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "TweetNER7"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "WikiANN en"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "WikiNeural"
+        }
+    ],
+    "NER_zh": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "CCKS2017"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "MSRA"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer22"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "multiconer23"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "resume"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "youku"
+        }
+    ]
+}
