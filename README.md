@@ -35,7 +35,7 @@ Feature Highlights:
 
 
 ## Release & News 📆
- - **[Sep 30]** Accepted by COLING 2025. 🎉
+ - **[Nov 30]** Accepted by COLING 2025. 🎉
  - **[July 15]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
  - **[July 5]** We released our codes supporting the training and inference of our B2NER models.
  - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
