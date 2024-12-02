@@ -34,7 +34,8 @@ Feature Highlights:
 | B2NER | **72.1**    |  **61.3**     | **43.3**
 
 
-## Release 📆
+## Release & News 📆
+ - **[Sep 30]** Accepted by COLING 2025. 🎉
  - **[July 15]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
  - **[July 5]** We released our codes supporting the training and inference of our B2NER models.
  - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
@@ -202,7 +203,7 @@ python calculate_f1.py --root /path/to/output_dir
 Final average results can be computed by averaging the metrics at certain epoch (say last epoch) for multiple runs. 
 
 
-Customized training could be done by changing the `TASK_CONFIG_DIR` in the training script which specifies the train/test datasets. For instance, you can train a different model for cross-lingual experiments on Multiconer22 dataset by this script `/scripts/train_lora_internlm2_crosslingual.sh`.
+Customized training could be done by changing the `TASK_CONFIG_DIR` in the training script which specifies the train/test datasets. For instance, you can train a different model for cross-lingual experiments on Multiconer22 dataset by this script `/scripts/train_lora_internlm2_crosslingual.sh`. If you are also interested in replicating the supervised in-domain evaluation results, you find more details here https://github.com/UmeanNever/B2NER/issues/1.
 
 *Note that our experiments use the internlm2 weights initially released on January 2024. We found that the official weights of internlm2 have been updated recently which are not fully experimented by us. You may need to adjust some default hyperparameters to achieve best performance.*
 
