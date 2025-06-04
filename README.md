@@ -50,7 +50,7 @@ We provide 3 versions of our dataset.
 
 <details>
   <summary><b>Example Data Format</b></summary>
- 
+
 ```json
 [
     {
