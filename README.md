@@ -48,6 +48,36 @@ We provide 3 versions of our dataset.
  - `B2NERD_all`: Contain ~1.4M samples from 54 datasets. The full-data version of our dataset suitable for in-domain supervised evaluation. It has standardized entity definitions but does not undergo any data selection or pruning.  
  - `B2NERD_raw`: The raw collected datasets with raw entity labels. It goes through basic format preprocessing but without further standardization.
 
+<details>
+  <summary><b>Example Data Format</b></summary>
+ 
+```json
+[
+    {
+        "sentence": "Barak announced 2 weeks ago that he would call for early elections .",
+        "entities": [
+            {
+                "name": "Barak",
+                "type": "person",
+                "pos": [
+                    0,
+                    5
+                ]
+            },
+            {
+                "name": "2 weeks ago",
+                "type": "date or period",
+                "pos": [
+                    16,
+                    27
+                ]
+            }
+        ]
+    },
+]
+```
+</details>
+
 You can download the data from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD) or [Google Drive](https://drive.google.com/file/d/1JW3ZZPlJ5vm_upn0msihI9FQjo4TmZDI/view?usp=sharing).  
 Please ensure that you have the proper licenses to access the raw datasets in our collection.
 
