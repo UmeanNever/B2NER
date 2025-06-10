@@ -19,7 +19,7 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
  - 📀 Data: You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD). See the data section below for more details.
  - 💾 Model (LoRA Adapters): We provide light-weight trained LoRA adapters for direct demo usage. See below [model usage](#quick-demo-with-b2ner-models) section.  
 
-Feature Highlights:
+**Feature Highlights:**
  - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date for training Open NER models.  
  - Achieves SoTA OOD NER performance across multiple benchmarks with light-weight LoRA adapters (<=50MB). 
  - Uses simple natural language format prompt, achieving 4X faster inference speed than previous SoTA which use complex prompts. 
@@ -41,10 +41,10 @@ Feature Highlights:
  - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
 ## Data (B2NERD)
-One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training. **The preprocessed test datasets (7 for Chinese NER and 7 for English NER) used for Open NER OOD evaluation in our paper are also included in the released dataset** to facilitate convenient evaluation for future research.  
+One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training. **The preprocessed test datasets (7 for Chinese NER and 7 for English NER) used for Open NER OOD evaluation in our paper are also included in the released dataset** to facilitate convenient evaluation for future research. See the table below for our train/test splits and dataset statistics.
 
 We provide 3 versions of our dataset.  
- - `B2NERD` (**Recommended**): Contain ~52k samples from 54 Chinese or English datasets. This is the final version of our dataset suitable for out-of-domain / zero-shot NER model training. It features standardized entity definitions and pruned, diverse data.  
+ - `B2NERD` (**Recommended**): Contain ~52k samples from 54 Chinese or English datasets. This is the final version of our dataset suitable for out-of-domain / zero-shot NER model training. It features standardized entity definitions and pruned, diverse training datasets, while also including unpruned test datasets.
  - `B2NERD_all`: Contain ~1.4M samples from 54 datasets. The full-data version of our dataset suitable for in-domain supervised evaluation. It has standardized entity definitions but does not undergo any data selection or pruning.  
  - `B2NERD_raw`: The raw collected datasets with raw entity labels. It goes through basic format preprocessing but without further standardization.
 
@@ -94,7 +94,7 @@ Below are the datasets statistics and source datasets for `B2NERD` dataset.
 
 <img src="assets/collected_datasets.png" alt="Collected Datasets" width="400" height="auto">
 
-More dataset information can be found in the Appendix of paper.
+Additional dataset details can be found in Appendix D of the paper.
 
 ## Quick Demo With B2NER Models
 
