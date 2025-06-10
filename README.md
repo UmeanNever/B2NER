@@ -33,12 +33,24 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 | GPT         | 60.1    |  54.7     | 31.8
 | B2NER | **72.1**    |  **61.3**     | **43.3**
 
-
 ## Release & News 📆
  - **[Nov 30]** Accepted by COLING 2025. 🎉
  - **[July 15]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
  - **[July 5]** We released our codes supporting the training and inference of our B2NER models.
  - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
+
+## Table of Contents 📑
+- [Data (B2NERD)](#data-b2nerd)
+- [Quick Demo With B2NER Models](#quick-demo-with-b2ner-models)
+  * [Model Checkpoints (LoRA Adapters)](#model-checkpoints-lora-adapters)
+  * [Sample Usage - Quick Demo](#sample-usage---quick-demo)
+- [Code Usage for Training and Inference](#code-usage-for-training-and-inference)
+  * [Requirements](#requirements)
+  * [Sample Usage - Batch Inference](#sample-usage---batch-inference)
+  * [Evaluation & Sample Predictions](#evaluation--sample-predictions)
+  * [Sample Usage - Training](#sample-usage---training)
+- [Extension to Other IE Tasks](#extension-to-other-ie-tasks)
+- [Cite](#cite)
 
 ## Data (B2NERD)
 One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training. **The preprocessed test datasets (7 for Chinese NER and 7 for English NER) used for Open NER OOD evaluation in our paper are also included in the released dataset** to facilitate convenient evaluation for future research. See the table below for our train/test splits and dataset statistics.
