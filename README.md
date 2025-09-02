@@ -256,34 +256,11 @@ To do this, simply replace `TASK_CONFIG_DIR` with a new task config that include
 
 ## Cite
 ```
-@inproceedings{yang-etal-2025-beyond,
-    title = "Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition",
-    author = "Yang, Yuming  and
-      Zhao, Wantong  and
-      Huang, Caishuang  and
-      Ye, Junjie  and
-      Wang, Xiao  and
-      Zheng, Huiyuan  and
-      Nan, Yang  and
-      Wang, Yuran  and
-      Xu, Xueying  and
-      Huang, Kaixin  and
-      Zhang, Yunke  and
-      Gui, Tao  and
-      Zhang, Qi  and
-      Huang, Xuanjing",
-    editor = "Rambow, Owen  and
-      Wanner, Leo  and
-      Apidianaki, Marianna  and
-      Al-Khalifa, Hend  and
-      Eugenio, Barbara Di  and
-      Schockaert, Steven",
-    booktitle = "Proceedings of the 31st International Conference on Computational Linguistics",
-    month = jan,
-    year = "2025",
-    address = "Abu Dhabi, UAE",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.coling-main.725/",
-    pages = "10902--10923"
+@inproceedings{yang2025beyond,
+  title={Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition},
+  author={Yang, Yuming and Zhao, Wantong and Huang, Caishuang and Ye, Junjie and Wang, Xiao and Zheng, Huiyuan and Nan, Yang and Wang, Yuran and Xu, Xueying and Huang, Kaixin and others},
+  booktitle={Proceedings of the 31st International Conference on Computational Linguistics},
+  pages={10902--10923},
+  year={2025}
 }
 ```
