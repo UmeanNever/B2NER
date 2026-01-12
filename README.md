@@ -53,7 +53,11 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 - [Cite](#cite)
 
 ## Data (B2NERD)
-One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training. **The preprocessed test datasets (7 for Chinese NER and 7 for English NER) used for Open NER OOD evaluation in our paper are also included in the released dataset** to facilitate convenient evaluation for future research. See the table below for our train/test splits and dataset statistics.
+One of the paper's core contribution is the construction of B2NERD dataset. It's a cohesive and efficient collection refined from 54 English and Chinese datasets and designed for Open NER model training. 
+
+The standardized test datasets (7 for Chinese NER and 7 for English NER) used for Open NER OOD evaluation in our paper are also included in the released dataset to facilitate convenient evaluation for future research. Note that **we do not make any changes to the entity annotations in the test sets**; only the label names are standardized.
+
+See the table below for our train/test splits and dataset statistics.
 
 We provide 3 versions of our dataset.  
  - `B2NERD` (**Recommended**): Contain ~52k samples from 54 Chinese or English datasets. This is the final version of our dataset suitable for out-of-domain / zero-shot NER model training. It features standardized entity definitions and pruned, diverse training data, while also including separate unpruned test data.  
