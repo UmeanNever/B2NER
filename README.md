@@ -15,16 +15,16 @@ We present B2NERD, a cohesive and efficient dataset that can improve LLMs' gener
 Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and surpass previous methods in 3 out-of-domain benchmarks across 15 datasets and 6 languages. 
 
  - 📖 Paper: [Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition](http://arxiv.org/abs/2406.11192)
- - 🎮 Code Repo: This repository provides code for both training and inference. Refer to the usage instructions below.
+ - 🎮 Code Repo: This repository provides **code for both training and inference**. Refer to the usage instructions below.
  - 📀 Data: You can download from [HuggingFace](https://huggingface.co/datasets/Umean/B2NERD). See the data section below for more details.
  - 💾 Model (LoRA Adapters): We provide light-weight trained LoRA adapters for direct demo usage. See below [model usage](#quick-demo-with-b2ner-models) section.  
 
 **Feature Highlights:**
  - Curated dataset (B2NERD) refined from the largest bilingual NER dataset collection to date for training Open NER models.  
- - Achieves SoTA OOD NER performance across multiple benchmarks with light-weight LoRA adapters (<=50MB). 
+ - Achieves **SoTA** OOD NER performance across multiple benchmarks with **light-weight LoRA adapters** (<=50MB). 
  - Uses simple natural language format prompt, achieving 4X faster inference speed than previous SoTA which use complex prompts. 
  - Easy integration with other IE tasks by adopting UIE-style instructions. 
- - Provides a universal entity taxonomy that guides the definition and label naming of new entities.
+ - Provides a **universal entity taxonomy** that guides the definition and label naming of new entities.
  - We have open-sourced our data, code, and models, and provided easy-to-follow usage instructions.  
 
 | Model | Avg. F1 on OOD English datasets  | Avg. F1 on OOD Chinese datasets | Avg. F1 on OOD multilingual dataset
@@ -34,10 +34,10 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 | B2NER | **72.1**    |  **61.3**     | **43.3**
 
 ## Release & News 📆
- - **[Nov 30]** Accepted by COLING 2025. 🎉
- - **[July 15]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
- - **[July 5]** We released our codes supporting the training and inference of our B2NER models.
- - **[June 18]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
+ - **[Nov 30, 2024]** Accepted by **COLING 2025**. 🎉
+ - **[July 15, 2024]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
+ - **[July 5, 2024]** We released our codes supporting the training and inference of our B2NER models.
+ - **[June 18, 2024]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
 ## Table of Contents 📑
 - [Data (B2NERD)](#data-b2nerd)
