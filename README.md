@@ -35,9 +35,9 @@ Our B2NER models, trained on B2NERD, outperform GPT-4 by 6.8-12.0 F1 points and 
 
 ## Release & News 📆
  - **[Nov 30, 2024]** Accepted by **COLING 2025**. 🎉
- - **[July 15, 2024]** We released our models supporting direct usage of our B2NER models for [quick demo](#quick-demo-with-b2ner-models) / batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
+ - **[July 15, 2024]** We released our B2NER models with support for both [quick demo](#quick-demo-with-b2ner-models) and batch inference. We also provide sample model predictions on the OOD test datasets of B2NERD from our models.
  - **[July 5, 2024]** We released our codes supporting the training and inference of our B2NER models.
- - **[June 18, 2024]** We released our papar and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
+ - **[June 18, 2024]** We released our paper and data. Our B2NERD dataset is highly suitable for training out-of-domain / zero-shot NER models.
 
 ## Table of Contents 📑
 - [Data (B2NERD)](#data-b2nerd)
