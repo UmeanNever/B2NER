@@ -261,10 +261,36 @@ To do this, simply replace `TASK_CONFIG_DIR` with a new task config that include
 ## Cite
 ```
 @inproceedings{yang2025beyond,
-  title={Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets and Languages for Open Named Entity Recognition},
-  author={Yang, Yuming and Zhao, Wantong and Huang, Caishuang and Ye, Junjie and Wang, Xiao and Zheng, Huiyuan and Nan, Yang and Wang, Yuran and Xu, Xueying and Huang, Kaixin and others},
-  booktitle={Proceedings of the 31st International Conference on Computational Linguistics},
-  pages={10902--10923},
-  year={2025}
+  author       = {Yuming Yang and
+                  Wantong Zhao and
+                  Caishuang Huang and
+                  Junjie Ye and
+                  Xiao Wang and
+                  Huiyuan Zheng and
+                  Yang Nan and
+                  Yuran Wang and
+                  Xueying Xu and
+                  Kaixin Huang and
+                  Yunke Zhang and
+                  Tao Gui and
+                  Qi Zhang and
+                  Xuanjing Huang},
+  editor       = {Owen Rambow and
+                  Leo Wanner and
+                  Marianna Apidianaki and
+                  Hend Al{-}Khalifa and
+                  Barbara Di Eugenio and
+                  Steven Schockaert},
+  title        = {Beyond Boundaries: Learning a Universal Entity Taxonomy across Datasets
+                  and Languages for Open Named Entity Recognition},
+  booktitle    = {Proceedings of the 31st International Conference on Computational
+                  Linguistics, {COLING} 2025, Abu Dhabi, UAE, January 19-24, 2025},
+  pages        = {10902--10923},
+  publisher    = {Association for Computational Linguistics},
+  year         = {2025},
+  url          = {https://aclanthology.org/2025.coling-main.725/},
+  timestamp    = {Fri, 26 Sep 2025 08:04:32 +0200},
+  biburl       = {https://dblp.org/rec/conf/coling/YangZHYWZNWXHZG25.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
